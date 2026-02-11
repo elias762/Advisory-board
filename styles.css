@@ -2,6 +2,122 @@
    EE-Partner Advisory Board — Slide Deck Styles
    ============================================================ */
 
+/* --- Password Gate --- */
+.password-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.password-gate.hidden {
+  display: none;
+}
+
+.password-gate__card {
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+  padding: 48px 32px;
+}
+
+.password-gate__logo {
+  width: 180px;
+  height: auto;
+  margin: 0 auto 32px;
+  display: block;
+  clip-path: inset(28% 5% 28% 5%);
+  margin-bottom: 0;
+  filter: invert(1);
+  mix-blend-mode: lighten;
+}
+
+.password-gate__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.password-gate__subtitle {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 32px;
+}
+
+.password-gate__field {
+  display: flex;
+  gap: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.password-gate__input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-right: none;
+  border-radius: 12px 0 0 12px;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.password-gate__input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.password-gate__input:focus {
+  border-color: #4f46e5;
+  background: rgba(255,255,255,0.1);
+}
+
+.password-gate__btn {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border: none;
+  border-radius: 0 12px 12px 0;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.password-gate__btn:hover {
+  opacity: 0.85;
+}
+
+.password-gate__error {
+  font-size: 0.8rem;
+  color: #f87171;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+
+.password-gate__error.hidden {
+  visibility: hidden;
+}
+
+.password-gate__input.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
 /* --- Reset & Base --- */
 *, *::before, *::after {
   margin: 0;

@@ -2,6 +2,36 @@
    EE-Partner Advisory Board -Slide Deck Application
    ============================================================ */
 
+// ─── Password Gate ──────────────────────────────────────────
+(function() {
+  const PASS = "AdvisoryBoard-Andrea-26";
+  const gate = document.getElementById("password-gate");
+  if (!gate) return;
+  const input = document.getElementById("password-input");
+  const btn   = document.getElementById("password-submit");
+  const err   = document.getElementById("password-error");
+
+  function attempt() {
+    if (input.value === PASS) {
+      gate.classList.add("hidden");
+    } else {
+      err.classList.remove("hidden");
+      input.classList.add("shake");
+      setTimeout(() => input.classList.remove("shake"), 400);
+      input.value = "";
+      input.focus();
+    }
+  }
+
+  btn.addEventListener("click", attempt);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") attempt();
+    err.classList.add("hidden");
+  });
+
+  input.focus();
+})();
+
 // ─── Slide Data (editable content object) ────────────────────
 // Each slide is an object with: id, title, overline, subtitle,
 // and a `blocks` array of content components.
