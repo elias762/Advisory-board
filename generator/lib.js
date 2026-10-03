@@ -129,7 +129,7 @@ function source(slide, text, y = 6.62, x = 2.1, w = 9.6) {
 
 // ---------- shared opening slides ----------
 async function mentiSlide(pres, d) {
-  const s = dark(pres, "Before we start: your view on AI", "Five quick questions on Menti — answers stay on screen and we come back to them at the end.",
+  const s = dark(pres, d.title || "Before we start: your view on AI", "Five quick questions on Menti — answers stay on screen and we come back to them at the end.",
     "Interactive Menti survey (placeholder — insert join code and QR). Run the five questions back to back, about 60 seconds each. Read out one surprising answer per question. Save the results: questions marked “repeat” are asked again at the end.\n\n" +
     d.questions.map((q, i) => `${i + 1}. ${q.q}${q.opts ? "  Options: " + q.opts : ""}`).join("\n"));
   // placeholder frame
@@ -398,7 +398,7 @@ async function enginesSlide(pres, d) {
 
 async function challengeSlide(pres, d) {
   const s = dark(pres, d.title, d.sub, d.notes);
-  const st = [["3 min", "Quantify"], ["2 min", "Develop"], ["2 min", "Validate"], ["3 min", "Pitch"]];
+  const st = d.stages || [["3 min", "Quantify"], ["2 min", "Develop"], ["2 min", "Validate"], ["3 min", "Pitch"]];
   const cw = 2.86, gap = 0.23;
   st.forEach(([t, h1], i) => {
     const x = 0.6 + i * (cw + gap);
