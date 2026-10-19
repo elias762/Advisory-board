@@ -1,22 +1,17 @@
-@import url("fonts.css");
 @page { size: A4; margin: 0; }
-:root{
-  --navy:#0A1033; --ink:#1E2236; --mute:#6B7085; --faint:#9A9EAF;
-  --line:#E3E5EC; --bg:#F6F7FA; --accent:#4A9BF5;
-}
+:root{ --navy:#0A1033; --ink:#22263A; --mute:#6B7085; --line:#E2E4EB; --bg:#F5F6F9; --accent:#3D8FEF; }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:210mm;height:297mm;background:#fff}
-body{font-family:"Inter",sans-serif;color:var(--ink);font-size:8.6pt;line-height:1.45;
-  -webkit-print-color-adjust:exact;print-color-adjust:exact;font-feature-settings:"cv11","ss01"}
-.page{position:relative;width:210mm;height:297mm;padding:15mm 17mm 13mm;display:flex;flex-direction:column}
-.serif{font-family:"Fraunces",serif;font-variation-settings:"opsz" 72}
+body{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;color:var(--ink);font-size:9pt;line-height:1.45;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;padding:16mm 18mm 13mm;display:flex;flex-direction:column}
 header{display:flex;justify-content:space-between;align-items:center;padding-bottom:6mm;border-bottom:.6pt solid var(--line)}
 header .sh{height:10mm}
-header .for{display:flex;align-items:center;gap:3mm;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-header .for img{height:6.2mm}
-.eyebrow{font-size:7pt;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:500}
-h1{font-family:"Fraunces",serif;font-weight:300;font-size:23pt;line-height:1.12;color:var(--navy);letter-spacing:-.01em;font-variation-settings:"opsz" 96}
-h2{font-family:"Fraunces",serif;font-weight:400;font-size:12pt;color:var(--navy);margin-bottom:2.4mm;font-variation-settings:"opsz" 48}
-.lead{font-size:9.6pt;line-height:1.55;color:var(--mute);max-width:150mm}
-footer{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;padding-top:4mm;border-top:.6pt solid var(--line);font-size:7pt;color:var(--faint);letter-spacing:.04em}
+header .leo{height:6mm}
+.eyebrow{font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+h1{font-size:19pt;line-height:1.2;font-weight:bold;color:var(--navy)}
+h2{font-size:10.5pt;font-weight:bold;color:var(--navy);margin-bottom:3mm}
+.lead{font-size:9.5pt;line-height:1.5;color:var(--mute)}
+section{margin-top:9mm}
+footer{margin-top:auto;display:flex;justify-content:space-between;padding-top:3.5mm;border-top:.6pt solid var(--line);font-size:7.5pt;color:var(--mute)}
 a{color:inherit;text-decoration:none}
