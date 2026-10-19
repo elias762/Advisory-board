@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><title>Projektskizze – Spezialisierte KI für Leo Gärtner</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.intro{margin:7mm 0 6.5mm;display:flex;flex-direction:column;gap:2.6mm}
+h1{font-size:21pt}
+.lead{font-size:9pt}
+
+/* Diagramm */
+.flow{display:grid;grid-template-columns:1.08fr 7mm 1fr 7mm 1fr;align-items:stretch;margin-bottom:7.5mm}
+.stack{display:flex;flex-direction:column;gap:3mm}
+.card{border:.6pt solid var(--line);border-radius:2.2mm;padding:3.2mm 3.8mm;background:#fff;display:flex;flex-direction:column}
+.card .tag{font-size:6.6pt;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:500;margin-bottom:1.2mm}
+.card h3{font-family:"Fraunces",serif;font-weight:400;font-size:10pt;color:var(--navy);line-height:1.2;margin-bottom:1.8mm;font-variation-settings:"opsz" 36}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:.7mm}
+.card li{position:relative;padding-left:3mm;font-size:7.5pt;color:var(--ink)}
+.card li:before{content:"";position:absolute;left:0;top:.62em;width:1.2mm;height:.6pt;background:var(--faint)}
+.card .note{margin-top:auto;padding-top:1.8mm;font-size:6.8pt;color:var(--mute);font-style:italic}
+.card.soft{background:var(--bg);border-color:var(--bg)}
+.card.dark{background:var(--navy);border-color:var(--navy);color:#fff}
+.card.dark .tag{color:rgba(255,255,255,.5)}
+.card.dark h3{color:#fff;margin-bottom:.6mm}
+.card.dark .sub{font-size:7pt;color:rgba(255,255,255,.55);margin-bottom:3mm}
+.conn{position:relative}
+.conn svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+
+.chat{display:flex;flex-direction:column;gap:1.8mm;margin-top:auto}
+.bubble{border-radius:2mm;padding:2mm 2.4mm;font-size:7.2pt;line-height:1.38}
+.bubble.q{align-self:flex-end;background:rgba(255,255,255,.12);max-width:88%}
+.bubble.a{background:#fff;color:var(--ink)}
+.src{display:flex;gap:1.2mm;margin-top:1.6mm;flex-wrap:wrap}
+.src span{font-size:6.2pt;border:.6pt solid var(--line);border-radius:1mm;padding:.3mm 1.3mm;color:var(--mute)}
+.src span b{color:var(--accent);font-weight:600}
+
+/* Zwei Spalten */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:10mm;margin-bottom:7.5mm}
+.list{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:30mm 1fr;gap:2mm;padding:1.8mm 0;border-top:.6pt solid var(--line)}
+.row:last-child{border-bottom:.6pt solid var(--line)}
+.row .k{font-weight:600;color:var(--navy);font-size:7.7pt}
+.row .v{color:var(--mute);font-size:7.6pt;line-height:1.4}
+
+/* Vorgehen */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
+.step{border-top:1pt solid var(--navy);padding-top:2.6mm}
+
+.step .n{font-family:"Fraunces",serif;font-size:14pt;font-weight:300;color:var(--navy);line-height:1}
+.step .t{font-weight:600;color:var(--navy);margin:1.6mm 0 .8mm;font-size:8.3pt}
+.step .d{color:var(--mute);font-size:7.7pt;line-height:1.42}
+.step .who{margin-top:1.8mm;font-size:6.6pt;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:500}
+
+.ps{margin-top:6mm;display:flex;align-items:baseline;gap:3mm;font-size:8.4pt;color:var(--mute)}
+.ps b{font-family:"Fraunces",serif;font-weight:400;font-size:10pt;color:var(--navy)}
+</style></head>
+<body><div class="page">
+
+<header>
+  <img class="sh" src="sh.png" alt="SH &amp; Partner">
+  <div class="for">für <img src="leo.png" alt="Leo Gärtner – Steuerparadies Deutschland"></div>
+</header>
+
+<section class="intro">
+  <div class="eyebrow">Projektskizze · Oktober 2026</div>
+  <h1>Eine spezialisierte KI für Steueroptimierung<br>und Vermögensaufbau</h1>
+  <p class="lead">Ein KI-Assistent im vertrauten Chat-Format – wie ChatGPT oder Claude –, dessen Antworten auf Leo Gärtners eigenem Wissen und einer kuratierten Auswahl externer Fachquellen beruhen, statt auf allgemeinem Internetwissen.</p>
+</section>
+
+<section class="flow">
+  <div class="stack">
+    <div class="card">
+      <div class="tag">01 · Intern</div>
+      <h3>Leo Gärtners Wissen</h3>
+      <ul><li>Videos &amp; Aufzeichnungen</li><li>PowerPoint-Präsentationen</li><li>PDFs &amp; Unterlagen</li></ul>
+      <div class="note">Upload-Portal, ohne Vorstrukturierung</div>
+    </div>
+    <div class="card">
+      <div class="tag">02 · Extern</div>
+      <h3>20 kuratierte Fachquellen</h3>
+      <ul><li>Gesetze, BFH, BMF</li><li>Haufe, NWB, Beck, DATEV</li><li>JUHN, YPOG, Kommer u. a.</li></ul>
+      <div class="note">Regelmäßiger Abgleich auf Updates</div>
+    </div>
+  </div>
+
+  <div class="conn"><svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 25 C 55 25, 45 50, 100 50" fill="none" stroke="#B9BDCB" stroke-width="0.7" vector-effect="non-scaling-stroke"/>
+    <path d="M0 75 C 55 75, 45 50, 100 50" fill="none" stroke="#B9BDCB" stroke-width="0.7" vector-effect="non-scaling-stroke"/>
+  </svg></div>
+
+  <div class="card soft" style="justify-content:center">
+    <div class="tag">03 · Wissensbasis</div>
+    <h3>Zusammenführen &amp;<br>strukturieren</h3>
+    <ul>
+      <li>Transkription von Video &amp; Audio</li>
+      <li>Automatische thematische Gliederung</li>
+      <li>Hybride Suche nach Stichwort und Bedeutung</li>
+      <li>Quelle, Datum und Rechtsraum (DE/AT/CH) je Dokument</li>
+    </ul>
+  </div>
+
+  <div class="conn"><svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 50 L 100 50" fill="none" stroke="#B9BDCB" stroke-width="0.7" vector-effect="non-scaling-stroke"/>
+  </svg></div>
+
+  <div class="card dark">
+    <div class="tag">04 · Ergebnis</div>
+    <h3>Die Leo-Gärtner-KI</h3>
+    <div class="sub">Arbeitstitel – Name folgt</div>
+    <div class="chat">
+      <div class="bubble q">Familienstiftung oder Holding – was passt für die Nachfolge?</div>
+      <div class="bubble a">Beide Wege haben klare Voraussetzungen. Entscheidend sind …
+        <div class="src"><span><b>●</b> Video 14</span><span><b>●</b> ErbStG</span><span><b>●</b> YPOG</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cols">
+  <div>
+    <h2>Einsatzbereiche</h2>
+    <div class="list">
+      <div class="row"><div class="k">Themenvorbereitung</div><div class="v">Interviews, Vorträge und Beratungen vorbereiten.</div></div>
+      <div class="row"><div class="k">Content-Erstellung</div><div class="v">Videoideen, Skripte und Gliederungen – fundiert.</div></div>
+      <div class="row"><div class="k">Brainstorming</div><div class="v">Neue Ideen zu Holding, Stiftung und Immobilien.</div></div>
+      <div class="row"><div class="k">Wissensrecherche</div><div class="v">Eigene Inhalte und Fachquellen verknüpfen.</div></div>
+    </div>
+  </div>
+  <div>
+    <h2>Qualitätsprinzipien</h2>
+    <div class="list">
+      <div class="row"><div class="k">Quellenangabe</div><div class="v">Jede Antwort nennt die genutzten Dokumente.</div></div>
+      <div class="row"><div class="k">Klare Trennung</div><div class="v">Belegtes Wissen vs. neu generierte Ideen.</div></div>
+      <div class="row"><div class="k">Rechtssicherheit</div><div class="v">Gesetz, BFH und BMF vor Fachliteratur.</div></div>
+      <div class="row"><div class="k">Lizenzkonform</div><div class="v">Bezahlinhalte nur mit passender Lizenz.</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Nächste Schritte</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div class="t">Feedback Quellen</div><div class="d">Ihr prüft die 20 externen Quellen und ergänzt, was fehlt.</div><div class="who">Leo Gärtner</div></div>
+    <div class="step"><div class="n">2</div><div class="t">Upload interner Dateien</div><div class="d">Über das Upload-Portal – Ordnung und Struktur übernimmt die KI.</div><div class="who">Leo Gärtner</div></div>
+    <div class="step"><div class="n">3</div><div class="t">Aufbau</div><div class="d">Verarbeitung, Wissensbasis und Anbindung des Sprachmodells.</div><div class="who">SH &amp; Partner</div></div>
+    <div class="step"><div class="n">4</div><div class="t">Test &amp; Start</div><div class="d">Gemeinsame Testphase, Feinschliff und Übergabe.</div><div class="who">Gemeinsam</div></div>
+  </div>
+  <div class="ps"><b>PS</b> Projektname gesucht – eure Ideen für den Namen der Leo-Gärtner-KI sind herzlich willkommen.</div>
+</section>
+
+<footer><span>SH &amp; Partner · Projektskizze</span><span>Vertraulich</span></footer>
+</div></body></html>
